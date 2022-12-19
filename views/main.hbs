@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <title>{{titulo}}</title>
+</head>
+<body class="body">
+    <form class="form" onsubmit="return addProducto(this)">
+    <h4>Complete los campos a continuación</h4>
+    <input class="input" id="title" type="text" placeholder="título">
+    <input class="input" id="price" type="number" min="0.1" step=".01" placeholder="precio">
+    <input class="input" id="thumbnail" type="text" placeholder="foto">
+    <input class="btn" value="Enviar" type="submit">
+    </form>
+        <table>
+        <tr class="tr1">
+            <th class="th1">NOMBRE</th>
+            <th class="th2">PRECIO</th>
+            <th class="th3">FOTO</th>
+        </tr>
+        </table>
+        <table id="products-container" class="table">
+        </table>
+    <div class="chat-container">
+        <form class="form" onsubmit="return addMessage(this)">
+        <h4>Centro de Mensajes</h4>
+        <input class="inputs" type="email" id="email" placeholder="jose@gmail.com">
+        <input class="inputs" type="text" id="texto"  placeholder="Tu mensaje">
+        <button id="btn">Enviar</button>
+    </form>
+    <h4>Mensajes</h4>
+    <div class="mensajes" id="parrafo"></div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
